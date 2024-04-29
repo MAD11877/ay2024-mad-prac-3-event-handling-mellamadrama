@@ -26,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        User user = new User("John Doe", "MAD Developer", 1, false);
+        String profilename = getIntent().getStringExtra("profilename");
+
+        User user = new User(profilename, "MAD Developer", 1, false);
 
         TextView tvName = findViewById(R.id.tvName);
         TextView tvDescription = findViewById(R.id.tvDescription);
